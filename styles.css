@@ -20,10 +20,12 @@ body {
   
   /* Main content container */
   .container {
-    position: relative;
+    position: absolute;
     z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 500px;
-    margin: 80px auto;
     background: rgba(255, 255, 255, 0.95);
     padding: 30px 40px;
     border-radius: 20px;
@@ -31,14 +33,16 @@ body {
     text-align: center;
   }
   
+  
   /* Animations */
   @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   .animate-fadein {
-    animation: fadeIn 1.5s ease-out;
+    animation: fadeIn 1s ease-out;
   }
+  
   
   h1 {
     margin-bottom: 10px;
